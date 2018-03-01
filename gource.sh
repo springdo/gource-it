@@ -8,7 +8,7 @@ rm -rf *.txt *txt-r combined-gource.mp4 combined-gource.ppm
 echo "Running gource across current dir of repos\n\n"
 for p in $(ls -d */); do
   p=${p%%/}
-  echo "gource --output-custom-log ${p}.txt ${p}" | zsh
+  echo "gource --output-custom-log ${p}.txt ${p}" | sh
   sed -i '' -e "s#\|\/#\|\/${p}\/#g"  ${p}.txt
 done
 

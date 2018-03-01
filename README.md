@@ -9,6 +9,6 @@ brew install ffmpeg
 brew install gource
 ```
 
-## run it!
+## Run it!
 1. Move the  `./gource.sh` script to a dir containing a collection of repositories.
 1. Run `./gource.sh` which will play the video. Once this has been completed, it will be compressed to a smaller file size. This can take sometime depending on the video length.
