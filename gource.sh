@@ -13,8 +13,7 @@ for p in $(ls -d */); do
 done
 
 echo "Creating combined gource textfile\n\n"
-cat *.txt > combined-gource.txt
-sort combined-gource.txt > combined-gource.txt
+cat *.txt | sort > combined-gource.txt
 
 echo "Creating combined gource vid & compressing it\n\n"
 gource combined-gource.txt -1280x720  --seconds-per-day 1 -o combined-gource.ppm
