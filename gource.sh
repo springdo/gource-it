@@ -16,7 +16,7 @@ echo "Creating combined gource textfile\n\n"
 cat *.txt | sort > combined-gource.txt
 
 echo "Creating combined gource vid & compressing it\n\n"
-gource combined-gource.txt -1280x720  --seconds-per-day 1 -o combined-gource.ppm
+ gource combined-gource.txt --highlight-users --user-font-size 25  --seconds-per-day 0.5 --elasticity 0.2 -o combined-gource.ppm
 ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i combined-gource.ppm -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 combined-gource.mp4
 
 echo "Tidying up temp files\n\n"
